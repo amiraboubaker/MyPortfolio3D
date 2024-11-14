@@ -106,7 +106,7 @@ const About = () => {
                             <p className="grid-subtext">Contact me</p>
                             <div className="copy-container" onClick={handleCopy}>
                                 <img src={hasCopied ? '/assets/tick.svg' : '/assets/copy.svg'} alt="copy" className="w-6 h-6 object-contain" />
-                                <p className="md:text-xl md:text-xl font-medium text-gray_gradient text-white">amira.boubaker@esprim.tn</p>
+                                <p className="md:text-xl md:text-xl font-medium">amira.boubaker@esprim.tn</p>
                             </div>
                         </div>
                     </div>
