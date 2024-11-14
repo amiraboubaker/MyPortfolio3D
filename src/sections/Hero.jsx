@@ -10,6 +10,7 @@ import {calculateSizes} from "../constants/index.js";
 import ReactLogo from "../components/ReactLogo.jsx";
 import Cube from "../components/Cube.jsx";
 import Rings from "../components/Rings.jsx";
+import HeroCamera from "../components/HeroCamera.jsx";
 
 const Hero = () => {
     const isSmall = useMediaQuery({maxWidth: 440});
@@ -31,15 +32,15 @@ const Hero = () => {
                     <Suspense fallback={<CanvasLoader />}>
                         {/* Adjusted camera position and field of view */}
                         <PerspectiveCamera makeDefault position={[0, 2, 20]} />
+                        <HeroCamera isMobile={isMobile}>
+                            <HackerRoom
+                                position={sizes.deskPosition}
+                                rotation={[0, -Math.PI, 0]}
+                                scale={sizes.deskScale}
+                            />
+                        </HeroCamera>
                         <ambientLight intensity={0.5} />
                         <directionalLight position={[10, 10, 10]} intensity={1} />
-
-                        {/* Position, rotation, and scale adjustments for HackerRoom */}
-                        <HackerRoom
-                            position={sizes.deskPosition}
-                            rotation={[0, -Math.PI, 0]}
-                            scale={sizes.deskScale}
-                        />
                         <group>
                             <Target position={sizes.targetPosition} />
                             <ReactLogo position={sizes.reactLogoPosition}/>

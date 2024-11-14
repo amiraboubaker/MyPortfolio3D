@@ -3,7 +3,7 @@ import { Center, useTexture } from '@react-three/drei';
 import gsap from 'gsap';
 import { useCallback, useRef } from 'react';
 
-const Rings = ({ position = [-8, 8, 8] }) => {
+const Rings = ({ position = [-15, 1, 8] }) => {
     const refList = useRef([]);
     const getRef = useCallback((mesh) => {
         if (mesh && !refList.current.includes(mesh)) {
