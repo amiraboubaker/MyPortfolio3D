@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react';
 
 const DemoComputer = (props) => {
     const group = useRef();
-    const { nodes, materials, animations } = useGLTF('/models/computer.glb');
+    const { nodes, materials } = useGLTF('/models/computer.glb');
     const txt = useVideoTexture(props.texture ? props.texture : '/textures/project/project1.mp4');
 
     useEffect(() => {

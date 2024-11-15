@@ -1,10 +1,13 @@
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import { useRef, useState } from 'react';
 
+import useAlert from '/hooks/useAlert.js';
+import Alert from '../components/Alert.jsx';
 
 const Contact = () => {
     const formRef = useRef();
 
+    const { alert, showAlert, hideAlert } = useAlert();
     const [loading, setLoading] = useState(false);
 
     const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -12,7 +15,7 @@ const Contact = () => {
     const handleChange = ({ target: { name, value } }) => {
         setForm({ ...form, [name]: value });
     };
-
+//service_m9i7zyb
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
@@ -23,9 +26,9 @@ const Contact = () => {
                 import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
                 {
                     from_name: form.name,
-                    to_name: 'JavaScript Mastery',
+                    to_name: 'Amira Boubaker',
                     from_email: form.email,
-                    to_email: 'sujata@jsmastery.pro',
+                    to_email: 'amiraboubakeresprims@gmail.com',
                     message: form.message,
                 },
                 import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
@@ -33,7 +36,11 @@ const Contact = () => {
             .then(
                 () => {
                     setLoading(false);
-                   
+                    showAlert({
+                        show: true,
+                        text: 'Thank you for your message 😃',
+                        type: 'success',
+                    });
 
                     setTimeout(() => {
                         hideAlert(false);

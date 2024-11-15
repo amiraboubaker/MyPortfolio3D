@@ -1,7 +1,7 @@
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import { useRef, useState } from 'react';
 
-import useAlert from '../hooks/useAlert.js';
+import useAlert from '/hooks/useAlert.js';
 import Alert from '../components/Alert.jsx';
 
 const Contact = () => {
@@ -15,7 +15,6 @@ const Contact = () => {
     const handleChange = ({ target: { name, value } }) => {
         setForm({ ...form, [name]: value });
     };
-
     const handleSubmit = (e) => {
         e.preventDefault();
         setLoading(true);
@@ -26,9 +25,9 @@ const Contact = () => {
                 import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
                 {
                     from_name: form.name,
-                    to_name: 'JavaScript Mastery',
+                    to_name: 'Amira Boubaker',
                     from_email: form.email,
-                    to_email: 'sujata@jsmastery.pro',
+                    to_email: 'amiraboubakeresprims@gmail.com',
                     message: form.message,
                 },
                 import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
