@@ -11,7 +11,7 @@ const About = () => {
     }
 
     return (
-        <section className="c-space my-20">
+        <section className="c-space my-20" id="about">
             {/* Main grid layout with 1 column on small screens, 2 columns on medium screens, and 3 columns on larger screens */}
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 h-full">
 

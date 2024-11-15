@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import PropTypes from 'prop-types'; // Import PropTypes for prop validation
 import { navLinks } from '../constants/index.js';
 
 const NavItems = ({ onClick = () => {} }) => (
@@ -13,11 +12,6 @@ const NavItems = ({ onClick = () => {} }) => (
         ))}
     </ul>
 );
-
-// PropTypes validation for NavItems
-NavItems.propTypes = {
-    onClick: PropTypes.func, // Validates that onClick is a function
-};
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);

@@ -22,13 +22,14 @@ const Projects = () => {
 
     return (
         <section className="c-space my-20">
+            {/* Title Section */}
+            <div className="mt-4 text-center text-white">
+                <p className="text-xl font-bold">My Works</p>
+            </div>
+
             {/* Projects Section with two containers */}
             <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-10 w-full">
                 {/* Project Details Container */}
-                {/* Title Section */}
-                <div className="mt-5 text-left text-white">
-                    <p className="text-xl font-bold">My Works</p>
-                </div>
                 <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200 bg-gray-800 rounded-lg">
                     {/* Spotlight Image */}
                     <div className="absolute top-0 right-0 w-full h-64">

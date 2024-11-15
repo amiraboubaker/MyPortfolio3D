@@ -27,10 +27,10 @@ const Hero = () => {
                 </p>
                 <p className="hero_tag text-gray_gradient">Building Products & Brands</p>
             </div>
-            <div className="w-full h-full absolute inset-0" style={{ top: "10%", height: "120vh" }}>
-                <Canvas shadows style={{ width: '100%', height: '80%', margin: '0 auto' }}>
-                    <Suspense fallback={<CanvasLoader />}>
-                        <PerspectiveCamera makeDefault position={[0, 2, 20]} />
+            <div className="w-full h-full absolute inset-0" style={{top: "10%", height: "120vh"}}>
+                <Canvas shadows style={{width: '100%', height: '80%', margin: '0 auto'}}>
+                    <Suspense fallback={<CanvasLoader/>}>
+                        <PerspectiveCamera makeDefault position={[0, 2, 20]}/>
                         <HeroCamera isMobile={isMobile}>
                             <HackerRoom
                                 position={sizes.deskPosition}
@@ -38,20 +38,20 @@ const Hero = () => {
                                 scale={sizes.deskScale}
                             />
                         </HeroCamera>
-                        <ambientLight intensity={0.5} />
-                        <directionalLight position={[10, 10, 10]} intensity={1} />
+                        <ambientLight intensity={0.5}/>
+                        <directionalLight position={[10, 10, 10]} intensity={1}/>
                         <group>
-                            <Target position={sizes.targetPosition} />
-                            <ReactLogo position={sizes.reactLogoPosition} />
-                            <Cube position={sizes.cubePosition} />
-                            <Rings position={sizes.ringsPosition} />
+                            <Target position={sizes.targetPosition}/>
+                            <ReactLogo position={sizes.reactLogoPosition}/>
+                            <Cube position={sizes.cubePosition}/>
+                            <Rings position={sizes.ringsPosition}/>
                         </group>
                     </Suspense>
                 </Canvas>
             </div>
-            <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+            <div className="absolute bottom-0 left-0 right-0 w-full z-10 flex justify-center">
                 <a href="#contact" className="w-fit">
-                    <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96" />
+                    <Button name="Let's work together" isBeam containerClass="sm:w-fit w-full sm:min-w-96"/>
                 </a>
             </div>
         </section>
