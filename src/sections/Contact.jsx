@@ -1,4 +1,4 @@
-import emailjs from "@emailjs/browser";
+import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
 
 import useAlert from '/hooks/useAlert.js';
@@ -19,6 +19,16 @@ const Contact = () => {
         e.preventDefault();
         setLoading(true);
 
+        // Debugging Payload
+        console.log("Sending email with the following payload:");
+        console.log({
+            from_name: form.name,
+            to_name: 'Amira Boubaker',
+            from_email: form.email,
+            to_email: 'amiraboubakeresprims@gmail.com',
+            message: form.message,
+        });
+
         emailjs
             .send(
                 import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -30,10 +40,11 @@ const Contact = () => {
                     to_email: 'amiraboubakeresprims@gmail.com',
                     message: form.message,
                 },
-                import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+                import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
             )
             .then(
-                () => {
+                (response) => {
+                    console.log('Email sent successfully:', response);
                     setLoading(false);
                     showAlert({
                         show: true,
@@ -42,24 +53,23 @@ const Contact = () => {
                     });
 
                     setTimeout(() => {
-                        hideAlert(false);
+                        hideAlert();
                         setForm({
                             name: '',
                             email: '',
                             message: '',
                         });
-                    }, [3000]);
+                    }, 3000);
                 },
                 (error) => {
+                    console.error('Error sending email:', error);
                     setLoading(false);
-                    console.error(error);
-
                     showAlert({
                         show: true,
                         text: "I didn't receive your message 😢",
                         type: 'danger',
                     });
-                },
+                }
             );
     };
 
