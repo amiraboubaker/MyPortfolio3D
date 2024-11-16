@@ -24,7 +24,7 @@ const Projects = () => {
         <section className="c-space my-20">
             {/* Title Section */}
             <div className="mt-4 text-center text-white">
-                <p className="text-xl font-bold">My Works</p>
+                <p className="head-text text-left">My Works</p>
             </div>
 
             {/* Projects Section with two containers */}
