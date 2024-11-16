@@ -24,7 +24,7 @@ const About = () => {
                             className="w-full h-[300px] object-contain"
                         />
                     </div>
-                    <div className="mt-4 text-center text-white">
+                    <div className="mt-4 text-left text-white">
                         <p className="text-xl font-bold">Hi, I&#39;m Amira</p>
                         <p className="text-lg mt-2 text-gray-400">
                             I&#39;m a mobile and web developer, from Tunisia. I have a passion for creating visually stunning and user-friendly web applications.
