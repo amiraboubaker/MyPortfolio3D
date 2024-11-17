@@ -16,7 +16,7 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 h-full">
 
                 {/* First grid item */}
-                <div className="flex flex-col items-center p-4 bg-gray-800 rounded-lg shadow-lg">
+                <div className="flex flex-col items-center p-4 bg-gray-800 rounded-lg shadow-lg pl-8 pr-8">
                     <div className="flex justify-center w-full">
                         <img
                             src="/assets/grid1.png"
@@ -27,11 +27,14 @@ const About = () => {
                     <div className="mt-4 text-left text-white">
                         <p className="text-xl font-bold">Hi, I&#39;m Amira</p>
                         <p className="text-lg mt-2 text-gray-400">
-                            I&#39;m a mobile and web developer, from Tunisia. I have a passion for creating visually stunning and user-friendly web applications.
-                            I have honed my skills in frontend and backend development, with a focus on animated 3D websites.
+                            I&#39;m a mobile and web developer, from Tunisia. I have a passion for creating visually
+                            stunning and user-friendly web applications.
+                            I have honed my skills in frontend and backend development, with a focus on animated 3D
+                            websites.
                         </p>
                     </div>
                 </div>
+
 
                 {/* Second grid item */}
                 <div className="flex flex-col items-center p-4 bg-gray-800 rounded-lg shadow-lg">
@@ -45,7 +48,7 @@ const About = () => {
                     <div className="mt-4 text-center text-white">
                         <p className="text-xl font-bold">Tech Stack</p>
                         <p className="text-lg mt-2 text-gray-400">
-                            I specialize in JavaScript/TypeScript with a focus on React and Next.js ecosystems.
+                            I specialize in JavaScript/TypeScript with a focus on React.
                         </p>
                     </div>
                 </div>
@@ -76,13 +79,15 @@ const About = () => {
                         <p className="grid-headtext text-center mt-10">
                             I work remotely across most timezones.
                         </p>
-                        <p className="grid-subtext text-center text-gray-400">I&#39;m based in Tunisia, with remote available.</p>
-                        <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+                        <p className="grid-subtext text-center text-gray-400">I&#39;m based in Tunisia, with remote
+                            available.</p>
+                        <Button name="Contact Me" isBeam containerClass="w-full mt-10"/>
                     </div>
                 </div>
 
                 {/* Fourth grid item (Passion - larger) */}
-                <div className="col-span-1 md:col-span-2 xl:col-span-2 flex flex-col items-center p-4 bg-gray-800 rounded-lg shadow-lg">
+                <div
+                    className="col-span-1 md:col-span-2 xl:col-span-2 flex flex-col items-center p-4 bg-gray-800 rounded-lg shadow-lg">
                     <div className="flex justify-center w-full">
                         <img
                             src="/assets/grid3.png"
@@ -93,7 +98,8 @@ const About = () => {
                     <div className="mt-4 text-center text-white">
                         <p className="text-xl font-bold">My Passion for Coding</p>
                         <p className="text-lg mt-2 text-gray-400">
-                            I love solving problems and creating innovative solutions. Coding isn&#39;t just my profession - it is my passion.
+                            I love solving problems and creating innovative solutions. Coding isn&#39;t just my
+                            profession - it is my passion.
                         </p>
                     </div>
                 </div>
@@ -101,11 +107,13 @@ const About = () => {
                 {/* Fifth grid item (Contact - smaller) */}
                 <div className="flex flex-col items-center p-4 bg-gray-800 rounded-lg shadow-lg">
                     <div className="grid-container flex flex-col items-center">
-                        <img src="/assets/grid4.png" alt="grid-4" className="w-full md:h-[126px] sm:h-[276] h-fit object-cover sm:object-top" />
+                        <img src="/assets/grid4.png" alt="grid-4"
+                             className="w-full md:h-[126px] sm:h-[276] h-fit object-cover sm:object-top"/>
                         <div className="space-y-2 text-center text-white">
                             <p className="grid-subtext">Contact me</p>
                             <div className="copy-container" onClick={handleCopy}>
-                                <img src={hasCopied ? '/assets/tick.svg' : '/assets/copy.svg'} alt="copy" className="w-6 h-6 object-contain" />
+                                <img src={hasCopied ? '/assets/tick.svg' : '/assets/copy.svg'} alt="copy"
+                                     className="w-6 h-6 object-contain"/>
                                 <p className="md:text-xl md:text-xl font-medium text-gray_gradient text-white">amira.boubaker@esprim.tn</p>
                             </div>
                         </div>
