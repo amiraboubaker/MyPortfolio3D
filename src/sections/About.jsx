@@ -1,6 +1,6 @@
+import { useState } from "react";
 import Globe from "react-globe.gl";
 import Button from "../components/Button";
-import { useState } from "react";
 
 const About = () => {
     let zoomLevel = 1; // You need to define the zoomLevel value (you can adjust it based on your logic)

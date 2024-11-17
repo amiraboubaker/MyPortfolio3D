@@ -1,8 +1,8 @@
-import { myProjects } from "../constants/index.js"; // Correct import path
-import { useState, Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
 import { Center, OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { Suspense, useState } from "react";
 import DemoComputer from "../components/DemoComputer.jsx";
+import { myProjects } from "../constants/index.js"; // Correct import path
 
 const projectCount = myProjects.length;
 
@@ -63,15 +63,6 @@ const Projects = () => {
                                     </div>
                                 ))}
                             </div>
-                            <a
-                                className="flex items-center gap-2 cursor-pointer text-blue-400"
-                                href={currentProject.href}
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <p>Check Live Site</p>
-                                <img src="/assets/arrow-up.png" className="w-3 h-3" alt="arrow" />
-                            </a>
                         </div>
 
                         {/* Navigation Arrows */}

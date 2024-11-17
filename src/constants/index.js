@@ -23,7 +23,7 @@ export const myProjects = [
             {
                 id: 1,
                 name: 'React native',
-                path: '/assets/react-native.svg',
+                path: '/assets/react.svg',
             },
             {
                 id: 2,
